@@ -233,3 +233,8 @@ def paymentrazor(request):
 def payment_success(request):
     request.session['cart'] = {}  # Clear cart after successful payment
     return redirect("success")
+
+def success(request):
+    categories = Category.objects.all()
+    brand = Brand.objects.all()
+    return render(request,'success.html',{'categories': categories,  "brands": brand})
