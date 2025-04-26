@@ -21,6 +21,7 @@ urlpatterns = [
     path('wishlist_view/', views.wishlist_view, name='wishlist_view'),
     path("pay/", views.paymentrazor, name="payment"),
     path("account/", views.account, name="account"),
+    path('payment-success/', views.payment_success, name='payment_success'),
     path('success', views.success, name='success'),
     
 
