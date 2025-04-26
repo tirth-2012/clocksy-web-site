@@ -21,6 +21,7 @@ urlpatterns = [
     path('wishlist_view/', views.wishlist_view, name='wishlist_view'),
     path("pay/", views.paymentrazor, name="payment"),
     path("account/", views.account, name="account"),
+    path('success', views.success, name='success'),
     
 
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
