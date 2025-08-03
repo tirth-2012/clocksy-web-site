@@ -134,3 +134,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SECRET_KEY = os.getenv("SECRET_KEY", "unsafe-secret")
+DEBUG = os.getenv("DEBUG", "False") == "True"
+DATABASE_URL = os.getenv("DATABASE_URL")
